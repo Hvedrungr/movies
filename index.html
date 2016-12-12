@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Music retriever</title>
+    <meta name="description" content="Music_Retriever">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- TOOLS SCRIPTS -->
+      <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+      <script type="text/javascript" src="app/src/app.js"></script>
+      <script type="text/javascript" src="app/src/config.js"></script>
+
+      <script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+      <script type="text/javascript" src="node_modules/angular-bootstrap-npm/dist/angular-bootstrap.min.js"></script>
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
+      integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
+      crossorigin="anonymous">
+
+      <!-- COMPONENTS -->
+          <!-- SERVICES -->
+          <script type="text/javascript" src="app/src/services/DataService.js"></script>
+
+          <!-- MOVIE LIST -->
+          <script type="text/javascript" src="app/src/upcomingAlbums/UpcomingAlbums.js"></script>
+          <link rel="stylesheet" href="app/src/upcomingAlbums/UpcomingAlbums.css">
+
+  </head>
+
+  <body ng-app="Music">
+    <upcoming-albums ui-view></upcoming-albums>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>Band</th>
+      <th>Album</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="upcoming in upcomingAlbums">
+      <th scope="row">{{$index}}</th>
+      <td>{{upcoming.band.name}}</td>
+      <td>{{upcoming.album.title}}</td>
+      <td>{{upcoming.release_date}}</td>
+    </tr>
+  </tbody>
+</table>

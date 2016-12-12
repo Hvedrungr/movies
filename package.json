@@ -1,0 +1,17 @@
+{
+  "name": "Movie_Retriever",
+  "version": "0.0.0",
+  "description": "Retrieves movies informations",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "http-server -a localhost -p 8000 -c-1 ./",
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+	"bootstrap": "4.0.0-alpha.4",
+	"bootstrap-sass": "^3.3.7",
+  },
+  "devDependencies":{}
+}

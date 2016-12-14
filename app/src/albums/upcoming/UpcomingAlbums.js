@@ -1,13 +1,17 @@
 angular.module('Music').directive('upcomingAlbums', [
-  'DataService',
-  function (dataService) {
+  'DataService', '$state',
+  function (dataService, $state) {
     return {
-      templateUrl: 'app/src/upcomingAlbums/UpcomingAlbums.html',
+      templateUrl: 'app/src/albums/upcoming/UpcomingAlbums.html',
       restrict: 'E',
       link: function (scope) {
           dataService.get('albums/upcoming').then(function(data) {
             scope.upcomingAlbums = data.upcoming_albums;
-          })
+          });
+
+          scope.goToAlbum = function goToAlbum(id) {
+            $state.go('album-detail', {'id': id});
+          }
       }
     };
   }]

@@ -1,0 +1,4 @@
+.dot:before {
+    content: "\25cf";
+    font-size: 1em;
+}

@@ -8,8 +8,16 @@ app.config(
    $urlRouterProvider.otherwise('upcoming');
 
    $stateProvider
-     .state('upcoming', {
+      .state('upcoming', {
         url: '/upcoming',
-        templateUrl: 'app/src/upcomingAlbums/UpcomingAlbums.html'
-    });
+        template: '<upcoming-albums></upcoming-albums>'
+      })
+      .state('album-detail', {
+        url: '/album/:id',
+        template: '<album-details></album-details>'
+      })
+      .state('band-detail', {
+        url: '/band/:id',
+        template: '<band-details></band-details>'
+      });
 }]);

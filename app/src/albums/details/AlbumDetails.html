@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Album details</h1>
+  	<hr>
+    <!-- left column -->
+    <div class="col-md-3">
+      <div class="text-center">
+        <img src="{{album.album_cover}}" class="avatar img-circle" style="width: 150px;" alt="avatar">
+      </div>
+    </div>
+
+    <!-- edit form column -->
+    <div class="col-md-8 personal-info">
+      <h3>{{album.title}}</h3>
+      <h6>By {{band.band_name}} <span class="dot"></span> {{album['release date']}} <span class="dot"></span> {{album.songs.length}} songs</h3>
+    </div>
+</div>
+<hr>
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th scope="row"></th>
+      <th>Song</th>
+      <th>Length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="song in album.songs">
+      <td scope="row">{{$index+1}}</td>
+      <td>{{song.title}}</td>
+      <td>{{song.length}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -25,13 +25,17 @@
           <!-- SERVICES -->
           <script type="text/javascript" src="app/src/services/DataService.js"></script>
 
-          <!-- MOVIE LIST -->
-          <script type="text/javascript" src="app/src/upcomingAlbums/UpcomingAlbums.js"></script>
-          <link rel="stylesheet" href="app/src/upcomingAlbums/UpcomingAlbums.css">
+          <!-- UPCOMING ALBUMS LIST -->
+          <script type="text/javascript" src="app/src/albums/upcoming/UpcomingAlbums.js"></script>
+          <link rel="stylesheet" href="app/src/albums/upcoming/UpcomingAlbums.css">
+
+          <!-- ALBUM DETAILS -->
+          <script type="text/javascript" src="app/src/albums/details/AlbumDetails.js"></script>
+          <link rel="stylesheet" href="app/src/albums/details/AlbumDetails.css">
 
   </head>
 
   <body ng-app="Music">
-    <upcoming-albums ui-view></upcoming-albums>
+    <div ui-view></div>
   </body>
 </html>

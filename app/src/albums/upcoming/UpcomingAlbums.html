@@ -1,16 +1,17 @@
 <table class="table table-inverse">
   <thead>
     <tr>
+      <th scope="row"></th>
       <th>Band</th>
       <th>Album</th>
-      <th>Username</th>
+      <th>Release date</th>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="upcoming in upcomingAlbums">
-      <th scope="row">{{$index}}</th>
+      <td scope="row">{{$index}}</td>
       <td>{{upcoming.band.name}}</td>
-      <td>{{upcoming.album.title}}</td>
+      <td ng-click="goToAlbum(upcoming.album.id)">{{upcoming.album.title}}</td>
       <td>{{upcoming.release_date}}</td>
     </tr>
   </tbody>

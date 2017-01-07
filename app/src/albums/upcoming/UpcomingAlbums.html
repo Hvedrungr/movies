@@ -1,4 +1,4 @@
-<table class="table table-inverse">
+<table class="table table-inverse table-hover">
   <thead>
     <tr>
       <th scope="row"></th>
@@ -10,8 +10,8 @@
   <tbody>
     <tr ng-repeat="upcoming in upcomingAlbums">
       <td scope="row">{{$index}}</td>
-      <td>{{upcoming.band.name}}</td>
-      <td ng-click="goToAlbum(upcoming.album.id)">{{upcoming.album.title}}</td>
+      <td class="clickable" go-to-state="band-detail" with-id="{{upcoming.band.id}}">{{upcoming.band.name}}</td>
+      <td class="clickable" go-to-state="album-detail" with-id="{{upcoming.album.id}}">{{upcoming.album.title}}</td>
       <td>{{upcoming.release_date}}</td>
     </tr>
   </tbody>

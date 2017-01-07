@@ -1,0 +1,4 @@
+.table-hover td:hover.clickable {
+    cursor: pointer;
+    text-decoration: underline;
+}

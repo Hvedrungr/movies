@@ -1,0 +1,32 @@
+ <div class="container">
+    <h1>Band details</h1>
+  	<hr>
+    <!-- left column -->
+    <div class="col-md-3">
+      <div class="text-center">
+        <img src="{{band.logo}}" class="avatar img-circle" style="width: 150px;" alt="avatar">
+      </div>
+    </div>
+
+    <!-- edit form column -->
+    <div class="col-md-8 personal-info">
+      <h3>{{band.band_name}}</h3>
+    </div>
+</div>
+<hr>
+<table class="table table-inverse table-hover">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Title</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="album in band.discography">
+      <td>{{album.year}}</td>
+      <td class="clickable" go-to-state="album-detail" with-id="{{album.id}}">{{album.title}}</td>
+      <td>{{album.type}}</td>
+    </tr>
+  </tbody>
+</table>

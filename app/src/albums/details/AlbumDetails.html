@@ -11,11 +11,11 @@
     <!-- edit form column -->
     <div class="col-md-8 personal-info">
       <h3>{{album.title}}</h3>
-      <h6>By {{band.band_name}} <span class="dot"></span> {{album['release date']}} <span class="dot"></span> {{album.songs.length}} songs</h3>
+      <h6>By <a ui-sref="band-detail({id: band.id})">{{band.band_name}}</a> <span class="dot"></span> {{album['release date']}} <span class="dot"></span> {{album.songs.length}} songs</h3>
     </div>
 </div>
 <hr>
-<table class="table table-inverse">
+<table class="table table-inverse table-hover">
   <thead>
     <tr>
       <th scope="row"></th>

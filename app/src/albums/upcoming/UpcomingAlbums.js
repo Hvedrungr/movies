@@ -8,10 +8,6 @@ angular.module('Music').directive('upcomingAlbums', [
           dataService.get('albums/upcoming').then(function(data) {
             scope.upcomingAlbums = data.upcoming_albums;
           });
-
-          scope.goToAlbum = function goToAlbum(id) {
-            $state.go('album-detail', {'id': id});
-          }
       }
     };
   }]

@@ -1,0 +1,20 @@
+.container-medium {
+  width: 35%;
+  text-align: justify;
+}
+
+#tabs {
+  display: block;
+  width: 100%;
+}
+
+#tabs .active{
+  border-color: grey;
+  color: white;
+  background-color: rgb(57, 57, 189);
+}
+
+#bio {
+  background-color: #373a3c;
+  color: white;
+}

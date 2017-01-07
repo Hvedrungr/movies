@@ -11,10 +11,37 @@
     <!-- edit form column -->
     <div class="col-md-8 personal-info">
       <h3>{{band.band_name}}</h3>
+      <h6>From {{band.details['country of origin']}}</h3>
     </div>
 </div>
+
 <hr>
-<table class="table table-inverse table-hover">
+
+<div class="container container-medium">
+  <dl class="row">
+   <dt class="col-sm-3">Genre</dt>
+   <dd class="col-sm-9">{{band.details.genre}}</dd>
+
+   <dt class="col-sm-3">Theme</dt>
+   <dd class="col-sm-9">{{band.details['lyrical themes']}}</dd>
+
+   <dt class="col-sm-3">Activity</dt>
+   <dd class="col-sm-9">{{band.details['years active']}}</dd>
+  </dl>
+</div>
+
+<hr>
+
+<ul id="tabs" class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" ng-class="{'active': !displayBio}" ng-click="displayBio = false">Discography</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" ng-class="{'active': displayBio}" ng-click="displayBio = true">Bio</a>
+  </li>
+</ul>
+
+<table class="table table-inverse table-hover" ng-if="!displayBio">
   <thead>
     <tr>
       <th>Year</th>
@@ -30,3 +57,9 @@
     </tr>
   </tbody>
 </table>
+
+<div id="bio">
+  <blockquote class="container" ng-if="displayBio">
+    {{band.bio}}
+  </div>
+</div>

@@ -1,4 +1,8 @@
-header{
+header {
+  width: 100%;
+  height: 35px;
   color: #fff;
   background-color: #46465a;
+  position: fixed;
+  z-index: 10;
 }

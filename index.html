@@ -21,6 +21,8 @@
       integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
       crossorigin="anonymous">
 
+      <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
       <!-- COMPONENTS -->
           <!-- SERVICES -->
           <script type="text/javascript" src="app/src/services/DataService.js"></script>
@@ -29,7 +31,12 @@
           <script type="text/javascript" src="app/src/directives/GoToState.js"></script>
 
           <!-- STYLESHEETS -->
+          <link rel="stylesheet" href="app/src/stylesheets/common.css">
           <link rel="stylesheet" href="app/src/stylesheets/table.css">
+
+          <!-- UPCOMING ALBUMS LIST -->
+          <script type="text/javascript" src="app/src/header/header.js"></script>
+          <link rel="stylesheet" href="app/src/header/header.css">
 
           <!-- UPCOMING ALBUMS LIST -->
           <script type="text/javascript" src="app/src/albums/upcoming/UpcomingAlbums.js"></script>
@@ -46,6 +53,13 @@
   </head>
 
   <body ng-app="Music">
-    <div ui-view></div>
+
+  <div id="main">
+    <header></header>
+    <div class="w3-container">
+      <div ui-view></div>
+    </div>
+  </div>
+
   </body>
 </html>

@@ -6,10 +6,16 @@ angular.module('Music').directive('bandDetails', [
       restrict: 'E',
       link: function (scope) {
 
-        if($state.params.id) {
-          dataService.get('band/', $state.params.id).then(function(data) {
+        var _getBand = function getBand(url, id) {
+          dataService.get(url, id).then(function(data) {
             scope.band = data;
           });
+        }
+
+        if($state.params.id) {
+          _getBand('band/', $state.params.id);
+        } else if($state.params.randomize) {
+          _getBand('band/random');
         }
 
       }

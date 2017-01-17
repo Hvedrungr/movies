@@ -4,17 +4,19 @@ angular.module('Music').directive('header', [
       templateUrl: 'app/src/header/header.html',
       restrict: 'E',
       link: function ($scope, element) {
+        /**
+          Manage sidebar events
+        **/
+          var myElement = element[0].getElementsByTagName('nav')[0];
 
-        var myElement = element[0].getElementsByTagName('nav')[0];
+          $scope.openNav = function openNav() {
+            myElement.style.width = '10%';
+            myElement.style.display = "block";
+          };
 
-        $scope.openNav = function openNav() {
-          myElement.style.width = '10%';
-          myElement.style.display = "block";
-        };
-
-        $scope.closeNav = function closeNav() {
-          myElement.style.display = "none";
-        };
+          $scope.closeNav = function closeNav() {
+            myElement.style.display = "none";
+          };
       }
     };
   }]

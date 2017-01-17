@@ -17,7 +17,7 @@ app.config(
         template: '<album-details></album-details>'
       })
       .state('band-detail', {
-        url: '/band/:id',
+        url: '/band/:id?:randomize',
         template: '<band-details></band-details>'
       });
 }]);

@@ -8,7 +8,7 @@ angular.module('Music').directive('header', [
         var myElement = element[0].getElementsByTagName('nav')[0];
 
         $scope.openNav = function openNav() {
-          myElement.style.width = '25%';
+          myElement.style.width = '10%';
           myElement.style.display = "block";
         };
 

@@ -43,6 +43,10 @@
   </li>
 </ul>
 
+<hr>
+<input ng-model="search.$" ng-if="!displayBio">
+<hr>
+
 <table class="table table-hover" ng-if="!displayBio">
   <thead>
     <tr>
@@ -52,7 +56,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="album in band.discography">
+    <tr ng-repeat="album in band.discography | filter:search:strict">
       <td>{{album.year}}</td>
       <td class="clickable" go-to-state="album-detail" with-id="{{album.id}}">{{album.title}}</td>
       <td>{{album.type}}</td>

@@ -4,7 +4,7 @@
       class="w3-closenav w3-large">Close &times;
   </a>
   <a ui-sref="upcoming" ng-click="closeNav()">Upcoming</a>
-  <a ui-sref="band-detail({randomize: true})" ng-click="closeNav()">Random band</a>
+  <a ui-sref="band-detail({randomize: true})" ui-sref-opts="{reload: true, notify: true}" ng-click="closeNav()">Random band</a>
 </nav>
 
 <div class="w3-container">
